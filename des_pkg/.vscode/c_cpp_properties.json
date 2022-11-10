@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/zaynap/Desktop/catkin_turtle/src/des_pkg/include/**",
+        "/home/zaynap/Desktop/catkin_turtle/src/pk1/include/**",
+        "/home/zaynap/Desktop/catkin_turtle/src/robot_arm/include/**",
+        "/home/zaynap/Desktop/catkin_turtle/src/turtle_move/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
