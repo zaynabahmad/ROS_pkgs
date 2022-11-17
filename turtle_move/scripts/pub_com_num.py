@@ -1,5 +1,9 @@
+#a node to publish a random complex number
+
+
 #!/usr/bin/env python3
 import rospy 
+import random
 from turtle_move.msg import complex
 
 def send():
@@ -11,8 +15,8 @@ def send():
    rate=rospy.Rate(10)
    NUM=complex()
    while not rospy.is_shutdown():
-    com_n=0.0
-    rospy.loginfo(com_n)
+    num=0.0
+   rospy.loginfo(str(1*random.random())+"+"+str(1*random.random())+"i")
     
     pub.publish(NUM)
     rate.sleep()
