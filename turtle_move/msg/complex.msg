@@ -1,2 +1,2 @@
 float32 real_num
-complex com_num
+float32 com_num
