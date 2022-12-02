@@ -1,0 +1,30 @@
+<launch>
+ 
+ <param name="robot_description" command="$(find xacro)/xacro '$(find pkg1)/urdf/model_sim.xacro'"/>
+
+  <!-- send fake joint values -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="True"/>
+  </node>
+
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <!-- Show in Rviz   -->
+  <!--node name="rviz" pkg="rviz" type="rviz"/-->
+  <node name="rviz" pkg="rviz" type="rviz" />
+  <node pkg="convert_v" type="convert_velicties.py" name="convert_vels" output ="screen">
+    
+</node>
+
+<node pkg="convert_v" type="publish_twist.py" name="pub_twist" output ="screen">
+    
+</node>
+ <node pkg="convert_v" type="compute_odom.py" name="compute_odom" output="screen">
+    
+ </node>
+
+
+
+
+</launch>
