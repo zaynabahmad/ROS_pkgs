@@ -1,0 +1,8 @@
+prefix=/home/zaynap/zynab_robot/devel
+
+Name: pkg_rob_des
+Description: Description of pkg_rob_des
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

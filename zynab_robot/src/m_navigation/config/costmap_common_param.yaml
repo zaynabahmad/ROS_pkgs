@@ -1,0 +1,27 @@
+robot_radius: 0.25
+inflation_radius: 0.55
+
+
+laser_layer:
+  observation_sources:  scan 
+  scan:
+    data_type: LaserScan
+    topic: scan
+    marking: true
+    clearing: true
+    min_obstacle_height: 0.05
+    max_obstacle_height: 0.35
+    obstacle_range: 3.0
+    raytrace_range: 3.5
+
+
+inflation_layer:
+  enabled:              true
+  cost_scaling_factor:  3  # exponential rate at which the obstacle cost drops off (default: 10)
+  inflation_radius:     1.75  # max. distance from an obstacle at which costs are incurred for planning paths.
+  # inflation layer could be played for the distance between obstacle and the robot
+static_layer:
+  enabled:              true
+  map_topic: map
+  subscribe_to_updates: true
+  track_unknown_space:  false
